@@ -19,4 +19,14 @@ class HotelsTest extends TestCase
         $response->assertSee($hotel->name);
         //$response->assertStatus(200);
     }
+
+    /** @test  */
+    public function a_user_can_view_a_specific_hotel()
+    {
+        $hotel = factory('App\Hotel')->create();
+        $response = $this->get('/hotels/' . $hotel->id);
+
+        $response->assertSee($hotel->name);
+        //$response->assertStatus(200);
+    }
 }
