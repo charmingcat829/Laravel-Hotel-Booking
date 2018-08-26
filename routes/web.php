@@ -16,3 +16,6 @@ Route::get('/', function () {
 });
 
 Route::get('/hotels',  'HotelController@Index');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
