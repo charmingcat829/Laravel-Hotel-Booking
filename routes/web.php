@@ -11,13 +11,4 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/hotels',  'HotelController@Index');
-
-Route::get('/hotels/{hotel}',  'HotelController@show');
+Route::get('/{any}', 'SpaController@index')->where('any', '.*');

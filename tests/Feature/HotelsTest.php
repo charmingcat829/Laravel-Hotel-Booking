@@ -2,7 +2,6 @@
 
 namespace Tests\Feature;
 
-use App\Hotel;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
@@ -17,7 +16,6 @@ class HotelsTest extends TestCase
         $response = $this->get('/hotels');
 
         $response->assertSee($hotel->name);
-        //$response->assertStatus(200);
     }
 
     /** @test  */
@@ -27,6 +25,5 @@ class HotelsTest extends TestCase
         $response = $this->get('/hotels/' . $hotel->id);
 
         $response->assertSee($hotel->name);
-        //$response->assertStatus(200);
     }
 }
