@@ -1,1 +1,1 @@
-# Hotel-Booking-Laravel-Vue
+# HotelInterface-Booking-Laravel-Vue
