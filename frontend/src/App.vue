@@ -1,10 +1,19 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+     <div class="flex justify-between bg-grey-darker py-5" id="nav">
+
+       <div>
+          <router-link class="text-2xl px-5" to="/">Home</router-link>
+          <router-link class="text-2xl px-5 " to="/hotels">Hotels</router-link>
+        </div>
+
+       <div>
+          <router-link class="text-2xl px-5" to="/profile">Profile</router-link>
+        </div>
+      </div>
+
     <router-view/>
+
   </div>
 </template>
 
@@ -19,12 +28,13 @@
   color: #2c3e50;
 }
 #nav {
-  padding: 30px;
+  background-color: #36495d;
   a {
+    text-decoration: none;
     font-weight: bold;
-    color: #2c3e50;
+    color: #b7dcff;
     &.router-link-exact-active {
-      color: #42b983;
+      color: #59ffb5;
     }
   }
 }

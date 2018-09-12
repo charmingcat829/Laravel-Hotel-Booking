@@ -1,14 +1,13 @@
 <template>
-  <div class="container mx-auto">
-    <div class="flex flex-col">
-      <h1 class="flex-1 self-center text-center text-5xl mb-4 font-light">Hotels</h1>
+  <div class="container mx-auto mt-8">
+    <div class="flex">
 
       <div class="flex flex-row">
-        <div class="px-4 py-3 mr-4 border border-grey-darker rounded w-64">
-          <h1 class="font-normal border-b-4"> Filters </h1>
+
+        <div class="flex-shrink px-4 py-3 mr-4 border border-blue-dark rounded w-64 h-auto max-h-screen shadow-md">
+          <h1 class="font-normal border-b-2"> Filters </h1>
 
           <div class="my-5">
-
             <label class="block text-grey-darker text-base font-bold mb-2 text-left" for="hotelName">
               Name
             </label>
@@ -20,9 +19,7 @@
         </div>
 
         <div class="flex flex-col flex-1">
-            <div class="mb-4 bg-gray-lighter border-2 border-blue-dark rounded" v-for="hotel in filteredHotels" :key="hotel.id">
-              <hotel-detail :hotel="hotel"></hotel-detail>
-            </div>
+          <hotel-detail class="mb-5" v-for="hotel in filteredHotels" :key="hotel.id" :hotel="hotel"></hotel-detail>
         </div>
 
       </div>
@@ -60,7 +57,9 @@
       if (this.searchTerm.length === 0) return this.hotels;
 
       return this.hotels.filter(hotel => {
-        return hotel.name.toLowerCase().indexOf(this.searchTerm.toLowerCase()) > 1;
+        const index: Number = hotel.name.toLowerCase().indexOf(this.searchTerm.toLowerCase())
+        console.log(this.searchTerm, hotel.name, index)
+        return hotel.name.toLowerCase().indexOf(this.searchTerm.toLowerCase()) >= 0;
       });
     }
 
