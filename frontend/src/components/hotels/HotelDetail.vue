@@ -32,14 +32,17 @@
       <div class="border-l px-4 flex flex-col leading-normal text-left h-48">
 
         <div class="mb-8  p-2">
+
           <div class="text-black font-bold text-2xl mb-2">
             Can coffee make you a better developer?
           </div>
+
           <p class="text-grey-darker text-lg">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Voluptatibus quia, nulla! Maiores et perferendis eaque,
             exercitationem praesentium nihil.
           </p>
+
         </div>
       </div>
 

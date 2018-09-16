@@ -11,8 +11,10 @@
             <label class="block text-grey-darker text-base font-bold mb-2 text-left" for="hotelName">
               Name
             </label>
+
             <input class="shadow appearance-none border rounded w-full py-2 px-3
-                           text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
+                           text-grey-darker leading-tight
+                           focus:outline-none focus:shadow-outline"
                    id="hotelName" v-model="searchTerm" placeholder="Hotel Name">
           </div>
 
